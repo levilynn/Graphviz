@@ -1,0 +1,14 @@
+digraph Regionall{
+    node[shape=diamond];risk;potential;Ability;
+    node[shape=box,fontcolor=red];Normal;Fast;
+    node[shape=ellipse;fontcolor=blue];
+    
+    risk->Normal[label="yes"]
+    risk -> potential[label="no"]
+    potential->Fast[label="yes"]
+    potential->Normal[label="no"]
+    Fast->Ability
+    Ability->GiveResource[label="yes"]
+    Ability->ImproveAbility[label="no"]
+    Normal->ImproveAbility
+}
